@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="u9K-Df-pHK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="5Xi-cq-SMC">
+            <objects>
+                <navigationController id="u9K-Df-pHK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="32Y-b8-LxL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="oij-2M-mgy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Cu-UB-Wi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762" y="61"/>
+        </scene>
+        <!--Villains-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BondVillains" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <viewController id="vXZ-lx-hvc" userLabel="Villains" customClass="ViewController" customModule="BondVillains" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-QP-RAQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-QP-RAQ">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -56,10 +73,54 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lPA-QP-RAQ" secondAttribute="trailing" constant="-16" id="pb7-vx-eLn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Villains Here" id="scw-DV-c0w">
+                        <barButtonItem key="backBarButtonItem" title="BackButton" id="aCV-uB-wRR"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="463"/>
+            <point key="canvasLocation" x="-5" y="59"/>
+        </scene>
+        <!--Villain Details-->
+        <scene sceneID="1f8-td-rkx">
+            <objects>
+                <viewController storyboardIdentifier="VillainDetailViewController" id="KL1-OO-N0r" userLabel="Villain Details" customClass="VillainDetailViewController" customModule="BondVillains" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vXX-dJ-MRa"/>
+                        <viewControllerLayoutGuide type="bottom" id="KnY-7u-KXw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4x-qA-HLj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxp-fM-Qet">
+                                <rect key="frame" x="273" y="345" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7NR-9J-UtD">
+                                <rect key="frame" x="184" y="111" width="219" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="Vhf-eN-pFs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Kxp-fM-Qet" secondAttribute="centerX" constant="6" id="36h-jQ-lZ3"/>
+                            <constraint firstItem="7NR-9J-UtD" firstAttribute="top" secondItem="vXX-dJ-MRa" secondAttribute="bottom" constant="91" id="S8Z-In-KJD"/>
+                            <constraint firstAttribute="centerX" secondItem="7NR-9J-UtD" secondAttribute="centerX" constant="6.5" id="ajr-yW-vze"/>
+                            <constraint firstItem="Kxp-fM-Qet" firstAttribute="top" secondItem="7NR-9J-UtD" secondAttribute="bottom" constant="60" id="vyb-22-O7g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="7NR-9J-UtD" id="hmb-7t-xoQ"/>
+                        <outlet property="label" destination="Kxp-fM-Qet" id="p4O-ua-A5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubD-Lp-Ye4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="41"/>
         </scene>
     </scenes>
 </document>
